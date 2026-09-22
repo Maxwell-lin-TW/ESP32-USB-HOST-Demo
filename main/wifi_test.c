@@ -42,7 +42,12 @@ static void wifi_event_handler(void* event_handler_arg,
 
             esp_netif_ip_info_t ip;
             esp_netif_get_ip_info(wifi_netif, &ip);
+
+#if defined(CONFIG_IDF_TARGET_ESP32S3) && defined(CONFIG_LWIP_IP_FORWARD)
             ip_napt_enable(ip.ip.addr, true);
+#else
+#warning "For ESP32-S3 demo project, enable lwip_ip_forward for wifi to usb ecm test."
+#endif
             ESP_LOGI(TAG, "ip_napt_enable");
         break;
         case WIFI_EVENT_AP_STADISCONNECTED:

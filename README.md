@@ -4,14 +4,14 @@
 ### 1. Require Hardware & SDK version
 
 Hardware: 
-[ESP32-S3-DevKit-C](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/index.html)
+[ESP32-S3-DevKit-C](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/index.html) |
 [ESP32-P4X-FunctionEV](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32p4/esp32-p4x-function-ev-board/index.html)
 
 The ESP32-S3-DevKit-C can't supply power to downstream usb devices on its usb port at default.
 
 Try remove D1 and short it on the board, but beware of the voltage level that provide to usb devices.
 
-SDK Version: Tested on ESP-IDF v6.0.2
+SDK Version: Tested on ESP-IDF v6.1.0/v5.5.5
 
 Using following dependency, already exist in idf_components.yml file.
 ```
@@ -220,3 +220,27 @@ esp>usb #type again to disable
 
 ```
 
+### 8. Test:
+
+![img](s3_test_img.jpg)
+![img](p4_test_img.jpg)
+
+Tested USB-ECM devices:
+```
+CH395
+RTL8152b
+```
+
+Tested USB-ACM devices:
+```
+CH343
+ST VirtualComm
+```
+
+Tested USB Hub:
+```
+FE1.1S
+RTS5411T
+```
+
+EOF

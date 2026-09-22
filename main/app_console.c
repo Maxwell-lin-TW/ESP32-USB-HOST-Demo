@@ -32,12 +32,6 @@ int cmd_usb_function(int argc, char **argv){
     return ESP_OK;
 }
 
-int cmd_test_function(int argc, char **argv){
-
-    // usbhost_test();
-
-    return 0;
-}
 
 void app_cmd_usb_register(void *arg){
 
@@ -49,16 +43,8 @@ void app_cmd_usb_register(void *arg){
         .func_w_context = 0,
     };
 
-    esp_console_cmd_t cmd_usb_test = {
-        .command = "vs",
-        .help = "test",
-        .func = cmd_test_function,
-        .argtable = 0,
-        .func_w_context = 0,
-    };
-
     app_Console_Register_Cmd(&cmd_usb);
-    app_Console_Register_Cmd(&cmd_usb_test);
+    
 }
 
 // int print_task_list(int argc, char **argv)

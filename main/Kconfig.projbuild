@@ -2,25 +2,25 @@ menu "Example of USB Host Application"
 
     config EXAMPLE_ENABLE_USB_HID
         bool "ENABLE_USB_HID"
-        default n
+        default y
         help
             Enable USB Host HID application
 
     config EXAMPLE_ENABLE_USB_MSC
         bool "ENABLE_USB_MSC"
-        default n
+        default y
         help
             Enable USB Host MSC application
 
     config EXAMPLE_ENABLE_USB_CDC_ACM
         bool "ENABLE_USB_CDC_ACM"
-        default n
+        default y
         help
             Enable USB Host CDC ACM application
 
     config EXAMPLE_ENABLE_USB_CDC_ECM
         bool "ENABLE_USB_CDC_ECM"
-        default n
+        default y
         help
             Enable USB Host CDC ECM application
 
